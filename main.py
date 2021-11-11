@@ -3,8 +3,12 @@ import sys
 from pygame.locals import *
 
 pygame.init()
-DISPLAYSURF = pygame.display.set_mode((300,300))
-pygame.draw.circle(DISPLAYSURF, BLACK, (200,50), 30)
+pygame.display.set_caption("Race of the Races")
+DISPLAYSURF = pygame.display.set_mode((1000,500))
+DISPLAYSURF.fill('darkgreen')
+pygame.draw.circle(DISPLAYSURF, pygame.Color('white'), (200,50), 30)
+FPS = pygame.time.Clock()
+FPS.tick(60)
 
 while True:
     pygame.display.update()
